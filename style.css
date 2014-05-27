@@ -1,0 +1,453 @@
+/*
+Theme Name: MST2
+Description: New Media Standards Trust Theme for May 2014
+Version: 1.0
+*/
+
+
+
+html {
+    /* our base size - change this to scale everything */
+    /* using rem units as elastic pixels. Change fontsize here and everything else adaptes gracefully */
+    /* 1rem = 10px under most defaults */
+    font-size: 10px;
+}
+
+body {
+    font-size: 1.6rem;
+    max-width: 120rem;
+    margin: auto;
+    padding: 0;
+
+    font-family: 'Droid Serif', serif;
+    line-height: 2.8rem;
+    color: #444;
+    background-color: #fff;
+}
+
+
+pre {
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+    color: #222;
+    margin: 1rem 0;
+}
+
+h1 { font-size:244%;}
+h2 { font-size:195%;}
+h3 { font-size:156%;}
+h4 { font-size:125%;}
+h5 {font-size:100%; }
+h6 {font-size:80%; }
+
+small, .small { font-size: 75%; }
+
+/* secondary headings */
+h1 small, h1 .small,
+h2 small, h2 .small,
+h3 small, h3 .small,
+h4 small, h4 .small,
+h5 small, h5 .small,
+h6 small, h6 .small {
+    color: #888;
+    font-weight: normal;
+}
+
+p {
+    margin-bottom: 0.75rem;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="password"] {
+}
+
+
+/* form errors */
+.has-error input,
+.has-error select,
+.has-error textarea {
+  border-color: #b94a48;
+}
+
+.has-error label,
+.has-error .help-block {
+  color: #b94a48;
+}
+
+/* form misc */
+
+.form-group {
+    margin-bottom: 0.5em;
+}
+
+.help-block {
+    display: block;
+}
+
+
+/* buttons */
+
+
+.btn {
+    display: inline-block;
+    font-weight: normal;
+    text-align: center;
+    line-height: 1.42;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    padding: 0.5rem 0.7rem;
+}
+
+
+.btn:hover,
+.btn:focus {
+  color: #333333;
+  text-decoration: none;
+}
+
+
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.btn-default {
+    background: #000;
+    color: #fff;
+    font-family: 'Bree Serif', serif;
+}
+
+.btn-primary { }
+.btn-success { }
+.btn-info { }
+.btn-warning { }
+.btn-danger { }
+
+
+.btn-link {
+    border-radius: 0;
+    background: none;
+}
+
+.btn-link:hover {
+  text-decoration: underline;
+}
+
+/* alerts */
+
+.alert {
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.alert-danger {
+  color: #b94a48;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+
+.alert-success {
+  color: #468847;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+
+.alert-info {
+  color: #3a87ad;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+
+.alert-warning {
+  color: #c09853;
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+}
+
+
+
+/* TODO: responsiveness... */
+.container {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 120rem;
+    padding: 0 11.8rem;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+
+.pull-right {
+    float:right;
+}
+
+/* END BASE STYLING */
+
+
+/*
+Hover states:
+
+Tools
+background fill
+JL: #fdefc7
+unsourced: fabfc0
+churn: fdefc7
+press complaints: b2e1f4
+
+News
+Read more green
+#329737
+
+
+
+Menu - rollover text colour #808080
+
+Body text links green - #07c55c
+
+body text:
+
+font: Droid Serif Regular
+size: 16px
+color: #333333
+line-height: 28px
+
+p spacing:
+40px 
+
+
+*/
+
+
+input {
+    font-family: 'Cabin', sans-serif;
+    font-size: 1.4rem;
+    color: #333;
+    background-color: #ededed;
+    border: none;
+    padding: 0.4rem;
+}
+
+/* MODULES */
+
+
+/****/
+
+.site-header {
+    position: fixed;
+    height: 11.0rem;
+    background-color: #fff;
+    display:block;
+    top:0;
+    width:100%;
+}
+
+.site-header-inner {
+    position: relative;
+    text-align: center;
+}
+
+.site-nav {
+    position: absolute;
+    right: 11.8rem;
+    top: 3.7rem;
+    width: 3.5rem;    
+    height: 3.5rem;
+    background: #000;
+}
+
+.site-nav ul {
+    display: none;
+}
+
+.site-header .searchform {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 3.7rem 0 0 0;
+    width: 36rem;
+    padding: 0;
+}
+
+
+.site-logo {
+    position: absolute;
+    top: 3rem;
+    left: 11.8rem;
+}
+
+
+.site-content {
+    margin-top: 11.0rem;
+}
+
+
+.site-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 5rem 0;
+}
+
+/****
+ * front - sections on the front page (news, publications etc)
+ */
+
+.front {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 120rem;
+    padding: 1.5rem 11.8rem 8rem 11.8rem;
+}
+
+.front h2 {
+    padding: 5rem 0 5rem 0;
+    font-family: 'Cabin', sans-serif;
+    font-size: 3.2rem;
+    line-height: 3.84rem;
+    margin: 0;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.front-events {
+    background-color: #AFDA4A;
+    color: #333;
+}
+
+.front-orwell {
+    background-color: #000;
+    color: #fff;
+}
+
+
+.front-publications {
+    background-color: #ededed;
+}
+
+/* actually, this'll be an image */
+.front-orwell h2 {
+    color: #fff;
+}
+
+
+/* tag line + background image (+ js glitch effect) */
+.front-tagline {
+    background-image: url(http://lorempixel.com/1200/480/);
+    height: 480px;  /* TODO: responsiveness */
+    display: table;
+} 
+
+.front-tagline-inner {
+    display:table-cell;
+    vertical-align:middle;
+    text-align: center;
+}
+
+.tagline {
+    display: inline-block;
+    font-family: 'Bree Serif', serif;
+    font-size: 4.0rem;
+    line-height: 4.5rem;
+    padding: 1.0rem 2.0rem;
+    background-color: #000;
+    color: #fff;
+}
+
+
+/****/
+
+
+.item-tool {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 22rem;
+    height: 38.0rem;
+    padding: 1rem;
+    margin: 0;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+
+
+
+/***
+ *  post
+ *  note: using hatom structure as selectors
+ */
+
+
+.p-name {
+
+}
+
+.dt-published {
+    text-transform: uppercase;
+    font-family: 'Cabin', sans-serif;
+}
+
+
+.e-content {
+    width: 60rem;
+    margin: auto;
+}
+
+.p-summary {
+    width: 75%;
+}
+
+
+.single .dt-published {
+    font-size: 2.1rem;
+    line-height: 4.2rem;
+}
+
+.single .entry-header {
+    background-color: #ededed;
+    padding: 4rem 0 8rem 0;
+    text-align: center;
+}
+
+.single .p-name {
+}
+
+
+/****/
+.searchform input[type="search"] {
+    width: 100%;
+    padding: 1rem;
+}
