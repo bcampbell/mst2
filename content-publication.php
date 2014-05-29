@@ -1,4 +1,9 @@
 <?php
+    /* this template formats a publication post using the .fancypub style,
+       thumbnail, download link, no content */
+
+
+    /* get download link from scanning content of post - hacky but intuitive enough */
     $dl = mst2_get_download_url();
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class("fancypub"); ?>>

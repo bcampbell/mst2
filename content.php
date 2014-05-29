@@ -15,11 +15,16 @@
     <a class="btn btn-default fook hidden-sm" href="<?= esc_url( get_permalink() ) ?>">Read more</a>
 <?php } else { ?>
     <header class="entry-header">
+    <div class="l-contain">
     <h1 class="entry-title p-name"><? the_title(); ?></h1>
     <time class="dt-published published" datetime="<?=get_the_time('c')?>"><?= get_the_time('j F Y') ?></time>
+    </div>
     </header>
+
+    <div class="l-contain">
 	<div class="entry-content e-content">
 		<?php the_content(); ?>
+    </div>
     </div>
 <?php } ?>
 </article>
