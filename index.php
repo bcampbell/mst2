@@ -68,16 +68,12 @@
                 while ($q->have_posts()) {
                     $q->the_post();
             ?>
-                <div class="l-item50">
-            <?php
-                    get_template_part( 'content', 'publication' );
-            ?>
-                </div>
+            <div class="l-item50"><? get_template_part( 'content', 'publication' ); ?> </div>
             <?php
                 }
             ?>
             </div>
-            <div><a class="more-link" href="/publications">&gt; More publications</a></div>
+            <div class="text-center"><a class="more-link" href="/publications">&gt; More publications</a></div>
         </div> <!-- end .l-contain -->
     </div>
 
@@ -91,7 +87,7 @@
                     get_template_part( 'content', '' );
                 }
             ?>
-            <a class="more-link" href="/mst-news">&gt; More news</a>
+            <div class="text-center"><a class="more-link" href="/mst-news">&gt; More news</a></div>
         </div> <!-- end .l-contain -->
     </div>
 
