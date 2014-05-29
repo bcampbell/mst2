@@ -7,7 +7,7 @@ $term_description = term_description();
         <header class="category-header">
         <h1 class="archive-title"><? single_cat_title( '', true ); ?></h1>
         <?php if( !empty( $term_description ) ) { ?>
-        <div class=""><?= $term_description ?></div>
+        <div class="archive-description"><?= $term_description ?></div>
         <?php }?>
         </header>
     <?php if( is_category( 'publications' )) { ?>

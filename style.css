@@ -492,6 +492,14 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 }
 
 /****/
+.archive-description {
+    font-family: 'Bree Serif', serif;
+    font-size: 2.4rem;
+    line-height: 3rem;
+}
+
+
+/****/
 
 .more-link {
     font-family: 'Bree Serif', serif;
