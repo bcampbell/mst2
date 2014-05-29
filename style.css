@@ -615,6 +615,39 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
     padding: 1rem;
 }
 
+
+/****/
+.event {
+    display: inline-block;
+    text-align: center;
+    max-width: 60rem;
+}
+
+.event .timewrap {
+}
+
+.event time {
+    padding: 0;
+    background: #fff;
+    width: 13.8rem;
+    height: 13.8rem;
+}
+
+.event time .month {
+    display: block;
+    text-align: center;
+    font-size: 1.9rem;
+    color: #fff;
+    background-color:#329737;
+}
+
+.event time .day {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 6.5rem;
+}
+
 /****
  * RESPONSIVE STUFF
  * Adjustments for smaller screen sizes
