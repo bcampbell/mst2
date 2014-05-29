@@ -10,14 +10,13 @@ html {
     /* our base size - change this to scale everything */
     /* using rem units as elastic pixels. Change fontsize here and everything else adaptes gracefully */
     /* 1rem = 10px under most defaults */
-    font-size: 10px;
+    font-size: 10px;    /* RESPONSIVE */
 }
 
 body {
     font-size: 1.6rem;
-    max-width: 120rem;
-    margin: auto;
     padding: 0;
+    margin: 0;
 
     font-family: 'Droid Serif', serif;
     line-height: 2.8rem;
@@ -33,9 +32,11 @@ pre {
 h1,h2,h3,h4,h5,h6 {
     color: #222;
     margin: 1rem 0;
+    font-family: 'Droid Serif', serif;
+    font-weight: normal;
 }
 
-h1 { font-size:244%;}
+h1 { font-size:244%; line-height: 1.4; }
 h2 { font-size:195%;}
 h3 { font-size:156%;}
 h4 { font-size:125%;}
@@ -62,10 +63,15 @@ p {
 
 a {
     text-decoration: none;
+    color: #000;
+}
+a:visited {
+    color: #000;
 }
 
 a:hover {
     text-decoration: underline;
+    color: #07c55c
 }
 
 label {
@@ -115,6 +121,7 @@ input[type="password"] {
 
 
 .btn:hover,
+.btn:visited,
 .btn:focus {
   color: #333333;
   text-decoration: none;
@@ -130,6 +137,15 @@ input[type="password"] {
     background: #000;
     color: #fff;
     font-family: 'Bree Serif', serif;
+}
+
+.btn-default:visited {
+    color: #fff;
+}
+
+.btn-default:hover {
+    background: #329737;
+    color: #fff;
 }
 
 .btn-primary { }
@@ -183,13 +199,6 @@ input[type="password"] {
 
 
 
-/* TODO: responsiveness... */
-.container {
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 120rem;
-    padding: 0 11.8rem;
-}
 
 .center-block {
   display: block;
@@ -217,7 +226,57 @@ input[type="password"] {
 /* END BASE STYLING */
 
 
-/*
+
+/****
+ * LAYOUT
+ */
+
+
+/* pull content into place horizontally */
+.l-contain {
+    max-width: 965px;
+    min-width: 300px;   /* allow 10px margins */
+    padding: 0;
+    margin: auto;
+}
+
+
+/* stackable items - 4 horizontal items, stacks when room is short */
+.l-stackable {
+    display: block;
+/*    outline: 1px solid green; */
+}
+
+.l-stackable:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.l-item25, .l-item50 {
+    float: left;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    /*outline: 1px solid blue;*/
+    padding: 0;
+}
+
+.l-item25 {
+    width: 25%;   /* RESPONSIVE */
+}
+.l-item50 {
+    width: 50%;   /* RESPONSIVE */
+}
+
+
+/* http://www.w3.org/Style/Examples/007/center.en.html */
+
+
+/* NOTES
 Hover states:
 
 Tools
@@ -259,6 +318,11 @@ input {
     border: none;
     padding: 0.4rem;
 }
+/****/
+
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+    color: #333;
+}
 
 /* MODULES */
 
@@ -281,7 +345,7 @@ input {
 
 .site-nav {
     position: absolute;
-    right: 11.8rem;
+    right: 0;
     top: 3.7rem;
     width: 3.5rem;    
     height: 3.5rem;
@@ -305,7 +369,7 @@ input {
 .site-logo {
     position: absolute;
     top: 3rem;
-    left: 11.8rem;
+    left: 0;
 }
 
 
@@ -325,10 +389,6 @@ input {
  */
 
 .front {
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 120rem;
-    padding: 1.5rem 11.8rem 8rem 11.8rem;
 }
 
 .front h2 {
@@ -337,7 +397,6 @@ input {
     font-size: 3.2rem;
     line-height: 3.84rem;
     margin: 0;
-    font-weight: normal;
     text-transform: uppercase;
     text-align: center;
 }
@@ -363,20 +422,29 @@ input {
 }
 
 
-/* tag line + background image (+ js glitch effect) */
-.front-tagline {
+/* strapline: background image (+ js glitch effect) + text */
+.front-strapline {
     background-image: url(http://lorempixel.com/1200/480/);
     height: 480px;  /* TODO: responsiveness */
-    display: table;
+    background-size: cover;
 } 
 
-.front-tagline-inner {
-    display:table-cell;
-    vertical-align:middle;
+
+/* icky hack to center strapline */
+.strapline-outer {
+    display: table;
+    height: 480px;      /* TODO: responsive! */
+    width: 100%;
+}
+
+.strapline-inner {
+    display: table-cell; 
+    vertical-align: middle; 
     text-align: center;
 }
 
-.tagline {
+
+.strapline {
     display: inline-block;
     font-family: 'Bree Serif', serif;
     font-size: 4.0rem;
@@ -390,26 +458,51 @@ input {
 /****/
 
 
-.item-tool {
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    display: inline-block;
-    width: 22rem;
-    height: 38.0rem;
+.tool {
+    max-width: 30rem;
     padding: 1rem;
-    margin: 0;
+    margin: 0.5rem auto;
     border: 1px solid #ccc;
     text-align: center;
 }
 
+.tool img {
+    display: inline-block;
+    height: 10.4rem;
+}
 
+/****/
+.category-header {
+    background-color: #ededed;
+    padding: 4rem 0 8rem 0;
+    text-align: center;
+    margin-bottom: 4rem;
+}
 
+/****/
+
+.more-link {
+    font-family: 'Bree Serif', serif;
+    color: #000;
+    font-size: 1.7rem;
+}
 
 /***
  *  post
+ * 
  *  note: using hatom structure as selectors
+ *  whole-page posts and inside .single
+ *  multiple posts contained within .archive
  */
 
+
+.archive .post {
+    border-bottom: 1px solid #999;
+}
+
+.archive .post:first-child {
+    border-top: 1px solid #999;
+}
 
 .p-name {
 
@@ -445,9 +538,69 @@ input {
 .single .p-name {
 }
 
+/* publications */
+
+.archive .post.category-publications {
+    border: none;
+}
+
+.archive .category-publications {
+    vertical-align:top;
+    display: inline-block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 45%;
+    /*height: 22rem;*/
+    padding: 0;
+    margin: 0;
+    margin-bottom: 4.5rem;
+}
+
+.archive .category-publications .entry-thumb {
+    display: block;
+    float: left;
+    width: 15.6rem;
+    height: 21.6rem;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    margin-right: 1rem;
+    padding: 0;
+}
+
+.archive .category-publications .p-name {
+    font-family: 'Droid Serif', serif;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+
 
 /****/
 .searchform input[type="search"] {
     width: 100%;
     padding: 1rem;
 }
+
+
+/*@media all and (min-width: 400px) and (max-width: 700px) {
+}
+*/
+
+/* small - eg phone */
+@media (max-width: 450px) {
+    html { font-size: 8px; }
+
+    .l-item25 { width: 50%; }
+    .l-item50 { width: 100%; }
+}
+
+/* medium - eg tablet, desktop */
+@media (min-width: 451px) and (max-width: 800px) {
+    html { font-size: 9px; }
+
+    .l-item25 { width: 50%; }
+    .l-item50 { width: 100%; }
+}
+

@@ -17,8 +17,9 @@
 <body <?php body_class(); ?>>
 
 <header class="site-header">
-    <div class="container site-header-inner">
-        <a href="/" class="site-logo"><img src="http://lorempixel.com/180/52" alt="Media Standards Trust"/></a>
+    <div class="l-contain">
+       <div class="site-header-inner">
+        <a href="/" class="site-logo"><img src="<?= get_template_directory_uri(); ?>/img/mstlogo.png" alt="Media Standards Trust"/></a>
         <?php get_search_form(); ?>
         <nav class="site-nav">
          <ul>
@@ -29,6 +30,7 @@
 
         </ul>
         </nav>
+        </div>
     </div>
 </header>
 <div class="site-content">
