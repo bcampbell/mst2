@@ -1,7 +1,6 @@
 <?php
     $dl = mst2_get_download_url();
 ?>
-<!--- publication  --->
 <article id="post-<?php the_ID(); ?>" <?php post_class("fancypub"); ?>>
     <div class="entry-thumb hidden-sm">
         <? if ( has_post_thumbnail() ) { ?>

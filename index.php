@@ -80,6 +80,7 @@
     <div class="front front-news archive">
         <div class="l-contain">
             <h2>Latest News</h2>
+            <div>
             <?php
                 $q = new WP_Query('category_name=mst-news&showposts=3');
                 while ($q->have_posts()) {
@@ -87,6 +88,7 @@
                     get_template_part( 'content', '' );
                 }
             ?>
+            </div>
             <div class="text-center"><a class="more-link" href="/mst-news">&gt; More news</a></div>
         </div> <!-- end .l-contain -->
     </div>
