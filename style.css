@@ -31,7 +31,9 @@ pre {
 
 h1,h2,h3,h4,h5,h6 {
     color: #222;
-    margin: 1rem 0;
+/*    margin: 1rem 0; */
+    margin: 0;
+    padding: 0;
     font-family: 'Droid Serif', serif;
     font-weight: normal;
 }
@@ -248,9 +250,11 @@ input[type="password"] {
 /* stackable items - 4 horizontal items, stacks when room is short */
 .l-stackable {
     display: block;
-/*    outline: 1px solid green; */
+    padding: 0;
+    font-size: 0;   /* cheesiness to remove whitespace between elements */
 }
 
+/*
 .l-stackable:after {
     visibility: hidden;
     display: block;
@@ -259,22 +263,23 @@ input[type="password"] {
     clear: both;
     height: 0;
 }
+*/
 
-.l-item25, .l-item50 {
-    float: left;
+.l-item25, .l-item50, .l-item75 {
+    font-size: 1.6rem;  /* cheesiness: restore after whitespace-hiding hack TODO: RESPONSIVE */
+    vertical-align: top;
+/*    float: left; */
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     display: inline-block;
-    /*outline: 1px solid blue;*/
-    padding: 0;
+    padding-right: 1rem;
+    margin: 0;
 }
 
-.l-item25 {
-    width: 25%;   /* RESPONSIVE */
-}
-.l-item50 {
-    width: 50%;   /* RESPONSIVE */
-}
+/* RESPONSIVE: these change as screen shrinks */
+.l-item25 { width: 25%; }
+.l-item50 { width: 50%; }
+.l-item75 { width: 75%; }
 
 .l-horiz {
     outline: 1px solid red;
@@ -602,10 +607,12 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
     right: 0;
 }
 
-/****/
+/****
+ * post thumbnails (aka 'featured image')
+ */
 .entry-thumb {
-    width: 152px;   /* TODO: RESPONSIVE */
-    height: 216px;
+    width: 15.2rem;   /* TODO: RESPONSIVE? */
+    height: 21.6rem;
 }
 
 
@@ -618,34 +625,48 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 
 /****/
 .event {
-    display: inline-block;
-    text-align: center;
     max-width: 60rem;
+    margin: auto;
+    border: 1px solid red;
 }
 
-.event .timewrap {
+.event h3 {
+    color: #000;
+    font-size: 2rem;
+    line-height: 2.8rem;
 }
 
-.event time {
-    padding: 0;
-    background: #fff;
+
+/****
+ * calendar-style icon for showing day/month
+ */
+.dateicon {
+    display: inline-block;
     width: 13.8rem;
     height: 13.8rem;
-}
+    padding: 0;
 
-.event time .month {
+    background-color: #fff;
+    border-radius: 0.5rem;
+}
+.dateicon-month {
     display: block;
+    height: 25%;
+    width: 100%;
     text-align: center;
     font-size: 1.9rem;
     color: #fff;
     background-color:#329737;
+    border-radius: 0.5rem 0.5rem 0 0;
 }
-
-.event time .day {
+.dateicon-day {
+    width: 100%;
+    height: 75%;
     display: block;
     text-align: center;
     font-weight: bold;
     font-size: 6.5rem;
+    line-height: 10.3rem;
 }
 
 /****

@@ -94,17 +94,20 @@
     </div>
 
     <div class="front front-events archive">
-        <div class="l-contain text-center">
+        <div class="l-contain">
             <h2>Upcoming events</h2>
 
             <!-- dummy event -->
             <div class="event">
-                <div class="timewrap">
-                <time class="dt-published published" datetime="2014-05-29"><span class="month">May</span><span class="day">21</span></time>
+                <div class="l-stackable text-center">
+
+                 <div class="l-item25">
+                    <time class="dt-published published dateicon" datetime="2014-05-29"><span class="dateicon-month">May</span><span class="dateicon-day">21</span></time>
                 </div>
-                <div>
+                <div class="l-item75">
                     <h3>Fancypants Event</h3>
                     Vivamus fermentum semper porta. Nunc diam velit, adipiscing ut tristique vitae, sagittis vel odio. Maecenas convallis ullamcorper ultricies. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, id fringilla sem nunc vel mi. Nam dictum, odio nec pretium volutpat, arcu ante placerat erat, non tristique elit urna et turpis.
+                </div>
                 </div>
             </div>
 
