@@ -15,6 +15,7 @@
 
     <div class="front front-tools">
         <div class="l-contain">
+            <div class="front-body">
             <h2>Tools</h2>
 
             <div class="l-stackable">
@@ -52,6 +53,7 @@
             </div>
 
             </div> <!-- end .l-stackable -->
+            </div>
         </div> <!-- end .l-contain -->
 
     </div>
@@ -61,6 +63,7 @@
     ?>
     <div class="front front-publications archive">
         <div class="l-contain">
+            <div class="front-body">
             <h2>Latest Publications</h2>
             <div class="l-stackable">
             <?php
@@ -74,40 +77,47 @@
             ?>
             </div>
             <div class="text-center"><a class="more-link" href="/publications">&gt; More publications</a></div>
+            </div>
         </div> <!-- end .l-contain -->
     </div>
 
     <div class="front front-news archive">
         <div class="l-contain">
-            <h2>Latest News</h2>
-            <div>
-            <?php
-                $q = new WP_Query('category_name=mst-news&showposts=3');
-                while ($q->have_posts()) {
-                    $q->the_post();
-                    get_template_part( 'content', '' );
-                }
-            ?>
+            <div class="front-body">
+                <h2>Latest News</h2>
+                <div>
+                <?php
+                    $q = new WP_Query('category_name=mst-news&showposts=3');
+                    while ($q->have_posts()) {
+                        $q->the_post();
+                        get_template_part( 'content', '' );
+                    }
+                ?>
+                </div>
+                <div class="text-center"><a class="more-link" href="/mst-news">&gt; More news</a></div>
             </div>
-            <div class="text-center"><a class="more-link" href="/mst-news">&gt; More news</a></div>
         </div> <!-- end .l-contain -->
     </div>
 
     <div class="front front-events archive">
         <div class="l-contain">
-            <h2>Upcoming events</h2>
+            <div class="front-body">
+                <h2>Upcoming events</h2>
 
-            <!-- dummy event -->
-            <div class="event">
-                <div class="l-stackable text-center">
+                <!-- dummy event -->
+                <div class="event">
+                    <div class="l-stackable text-center">
 
-                 <div class="l-item25">
-                    <time class="dt-published published dateicon" datetime="2014-05-29"><span class="dateicon-month">May</span><span class="dateicon-day">21</span></time>
-                </div>
-                <div class="l-item75">
-                    <h3>Fancypants Event</h3>
-                    Vivamus fermentum semper porta. Nunc diam velit, adipiscing ut tristique vitae, sagittis vel odio. Maecenas convallis ullamcorper ultricies. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, id fringilla sem nunc vel mi. Nam dictum, odio nec pretium volutpat, arcu ante placerat erat, non tristique elit urna et turpis.
-                </div>
+                    <div class="l-item25">
+                        <time class="dt-published published dateicon" datetime="2014-05-29"><span class="dateicon-month">May</span><span class="dateicon-day">21</span></time>
+                    </div>
+                    <div class="l-item75 text-left">
+                        <div class="event-main">
+                        <h3>Fancypants Event</h3>
+                        Vivamus fermentum semper porta. Nunc diam velit, adipiscing ut tristique vitae, sagittis vel odio. Maecenas convallis ullamcorper ultricies. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, id fringilla sem nunc vel mi. Nam dictum, odio nec pretium volutpat, arcu ante placerat erat, non tristique elit urna et turpis.
+                        </div>
+                    </div>
+                    </div>
                 </div>
             </div>
 
@@ -116,9 +126,13 @@
     </div>
 
     <div class="front front-orwell">
-        <div class="l-contain">
-            <h2>The Orwell Prize</h2>
-            <a href="">Find out more</a>
+        <div class="l-contain text-center">
+            <div class="front-body">
+                <div class="orwell-wrapper">
+                    <a class="orwell-title" href="http://theorwellprize.co.uk"><img alt="The Orwell Prize" src="<?= get_template_directory_uri(); ?>/img/orwelltitle.png"/></a><br/>
+                    <a class="more-link" href="http://theorwellprize.co.uk">&gt; Find out more</a>
+                </div>
+            </div>
         </div> <!-- end .l-contain -->
     </div>
 
