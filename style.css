@@ -559,17 +559,20 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
     width: 75%;
 }
 
-/* mods for fullpage single posts */
+/* mods for fullpage single posts (and pages) */
 
+.page .p-name,
 .single .p-name {
     font-family: 'Bree Serif', serif;
 }
 
+.page .dt-published,
 .single .dt-published {
     font-size: 2.1rem;
     line-height: 4.2rem;
 }
 
+.page .entry-header,
 .single .entry-header {
     background-color: #ededed;
     padding: 4rem 0 8rem 0;

@@ -30,3 +30,4 @@ $term_description = term_description();
     </div>
 <?php
 get_footer();
+?>
