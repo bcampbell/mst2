@@ -9,7 +9,8 @@ see:
 
 A couple of php5 issues in that plugin...
 see category-pagination-fix-php-fix.diff
-
+and
+https://plugins.trac.wordpress.org/ticket/2224
 
 
 Download links for publications
