@@ -18,11 +18,21 @@ function mst2_setup() {
 		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
 	) );
 
+    // kludge to style next/prev links
+    add_filter('next_posts_link_attributes', 'mst2_next_posts_link_attributes');
+    add_filter('previous_posts_link_attributes', 'mst2_previous_posts_link_attributes');
+
 }
 add_action( 'after_setup_theme', 'mst2_setup' );
 
 
+function mst2_previous_posts_link_attributes() {
+    return 'class="btn btn-default" rel="prev"';
+}
 
+function mst2_next_posts_link_attributes() {
+    return 'class="btn btn-default" rel="next"';
+}
 
 // get the url of the first link in the post
 function mst2_get_download_url() {

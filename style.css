@@ -508,6 +508,11 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 }
 
 /****/
+.categorypage {
+    padding-bottom: 5em;
+}
+
+/****/
 .category-header {
     background-color: #ededed;
     padding: 4rem 0 8rem 0;

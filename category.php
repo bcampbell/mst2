@@ -1,9 +1,10 @@
 <?php
 $term_description = term_description();
-?>
 
-<?php get_header(); ?>
-    <div class="l-contain">
+get_header();
+?>
+<div class="categorypage">
+<div class="l-contain">
         <header class="category-header">
         <h1 class="archive-title"><? single_cat_title( '', true ); ?></h1>
         <?php if( !empty( $term_description ) ) { ?>
@@ -27,7 +28,12 @@ $term_description = term_description();
             <?php } ?>
         </div>
     <?php } ?>
+    <div class="text-center">
+        <?php previous_posts_link( 'Previous page' ); ?>
+        <?php next_posts_link( 'Next page' ); ?>
     </div>
+</div> <!-- end l-contain -->
+</div>
 <?php
 get_footer();
 ?>
