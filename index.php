@@ -1,7 +1,6 @@
 <?php
+    get_header();
 ?>
- 
-<?php get_header(); ?>
 
     <div class="front front-strapline ">
         <div class="l-contain">
@@ -109,12 +108,15 @@
                     <div class="l-stackable text-center">
 
                     <div class="l-item25">
-                        <time class="dt-published published dateicon" datetime="2014-05-29"><span class="dateicon-month">May</span><span class="dateicon-day">21</span></time>
+                        <time class="dt-published published dateicon" datetime="2014-08-11"><span class="dateicon-month">July</span><span class="dateicon-day">11</span></time>
                     </div>
                     <div class="l-item75 text-left">
                         <div class="event-main">
-                        <h3>Fancypants Event</h3>
-                        Vivamus fermentum semper porta. Nunc diam velit, adipiscing ut tristique vitae, sagittis vel odio. Maecenas convallis ullamcorper ultricies. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, id fringilla sem nunc vel mi. Nam dictum, odio nec pretium volutpat, arcu ante placerat erat, non tristique elit urna et turpis.
+                            <h3>Panel discussion</h3>
+                            <p>The Media Standards Trust is organising a panel discussion at the '<a href="http://www.kcl.ac.uk/sspp/kpi/events/eventrecords/2014/commongood.aspx">New Politics of the Common Good</a>' conference at King's College.<br/>
+                        '<em>Will Facebook tell you if your council is corrupt?</em>' will examine the decline of the local press, the rise of hyperlocal, the role of social
+                        media (Facebook in particular), and the democratic deficit.</p>
+                        <p><a href="https://www.eventbrite.co.uk/e/power-to-people-the-new-politics-of-the-common-good-tickets-11154925683">Book here</a> (Eventbrite)</p>
                         </div>
                     </div>
                     </div>
