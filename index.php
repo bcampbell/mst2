@@ -9,6 +9,7 @@
                 <span class="strapline">Accountability for the digital age</span>
                 </div>
             </div>
+            <div class="attribution text-right small">Image: <a href="https://www.flickr.com/photos/oliviachow/13929786994">Media Scrum</a> by Dean Goodwin (CC BY 2.0)</div>
         </div>
     </div>
 

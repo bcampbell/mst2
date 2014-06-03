@@ -498,7 +498,8 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 
 /* strapline: background image (+ js glitch effect) + text */
 .front-strapline {
-    background-image: url(http://lorempixel.com/1200/480/);
+    background-image: url(img/mediascrum.jpeg);
+/*    background-image: url(http://lorempixel.com/1200/480/); */
     height: 480px;  /* RESPONSIVE */
     background-size: cover;
 /*    padding-bottom: 0; */
@@ -838,6 +839,21 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 .copyright a {
     color: inherit;
 }
+
+
+/****
+ *
+ */
+.attribution {
+    color: #888;
+    display: none;
+}
+
+.front-strapline:hover .attribution {
+    display: block;
+}
+
+
 
 /****
  * RESPONSIVE STUFF
