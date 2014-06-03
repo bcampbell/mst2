@@ -17,7 +17,24 @@
             'by'=>"Haydn",
             'licence' => 'CC BY-NC-SA 2.0',
             'licence_link'=>'https://creativecommons.org/licenses/by-nc-sa/2.0/'
-        )
+        ),
+        array(
+            'file'=>'/img/strapline/do_away_with_clothes.jpeg',
+            'title'=>'Do away with clothes, not mobile',
+            'title_link'=>'https://www.flickr.com/photos/aakashgautam/8497909263',
+            'by' => 'utilitarian',
+            'by_link' => 'https://www.flickr.com/people/aakashgautam/',
+            'licence' => 'CC BY-NC 2.0',
+            'licence_link' => 'https://creativecommons.org/licenses/by-nc/2.0/'
+        ),
+        array(
+            'file'=>'/img/strapline/newspaper_kiosk_blurred.jpeg',
+            'title'=>'Newspaper Kiosk blured',
+            'title_link'=>'https://www.flickr.com/photos/aakashgautam/8497909263',
+            'by' => 'lambdachialpha',
+            'licence' => 'CC BY-NC-SA 2.0',
+            'licence_link' => 'https://creativecommons.org/licenses/by-nc-sa/2.0/'
+        ),
     );
 
     $photo = $photos[array_rand($photos)];
