@@ -21,17 +21,21 @@
        <div class="site-header-inner">
         <a href="/" class="site-logo"><img src="<?= get_template_directory_uri(); ?>/img/mstlogo.png" alt="Media Standards Trust"/></a>
         <?php get_search_form(); ?>
-        <nav class="site-nav">
-         <ul>
-             <li>blah</li>
-             <li>blah</li>
-             <li>blah</li>
-             <li>blah</li>
-
-        </ul>
-        </nav>
+        <div id="site-hotdog-btn" class="btn btn-hotdog is-hidden"></div>
         </div>
     </div>
 </header>
+
+<div id="site-nav-hotdog" class="site-nav-hotdog">
+    <div class="l-contain">
+    <?php wp_nav_menu( array(
+        'theme_location'=>'header-menu',
+        //'menu_class'=>'menu menu-fancy',
+        'depth'=>1,
+        'container'=>'nav'
+        ) ); ?>
+    </div>
+</div>
+
 <div class="site-content">
 

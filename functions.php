@@ -8,11 +8,10 @@ function mst2_setup() {
 	set_post_thumbnail_size( 152, 216,true );
 //	add_image_size( 'twentyfourteen-full-width', 1038, 576, true );
 
-    /*
 	register_nav_menus( array(
-		'primary'   => __( 'Top primary menu', 'mst2' ),
-	) );
-    */
+        'header-menu'=>'Site header menu',
+        'footer-menu'=>'Site footer menu'
+    ) );
 
 	add_theme_support( 'html5', array(
 		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
