@@ -41,7 +41,7 @@
 
     function photo_attribution($photo) {
         if(array_key_exists('by_link',$photo)) {
-            $by = "<a href=\"{$by['by_link']}\">{$photo['by']}</a>";
+            $by = "<a href=\"{$photo['by_link']}\">{$photo['by']}</a>";
         } else {
             $by = $photo['by'];
         }
