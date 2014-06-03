@@ -22,33 +22,33 @@
 
             <div class="l-item25">
             <div class="tool">
-                <a href=""><img src="<?= get_template_directory_uri(); ?>/img/journalistedicon.png" alt="Journalisted" /></a>
+                <a href="/journalisted/"><img src="<?= get_template_directory_uri(); ?>/img/journalistedicon.png" alt="Journalisted" /></a>
                 <p>Find journalists and see what they are writing about</p>
-                <a href="" class="btn btn-default">Read more</a>
+                <a href="/journalisted/" class="btn btn-default">Read more</a>
             </div>
             </div>
 
             <div class="l-item25">
             <div class="tool">
-                <a href=""><img src="<?= get_template_directory_uri(); ?>/img/churnalismicon.png" alt="Churnalism" /></a>
+                <a href="/churnalism/"><img src="<?= get_template_directory_uri(); ?>/img/churnalismicon.png" alt="Churnalism" /></a>
                 <p>Find journalists and see what they are writing about</p>
-                <a href="" class="btn btn-default">Read more</a>
+                <a href="/churnalism/" class="btn btn-default">Read more</a>
             </div>
             </div>
 
             <div class="l-item25">
             <div class="tool">
-                <a href=""><img src="<?= get_template_directory_uri(); ?>/img/unsourcedicon.png" alt="Unsourced" /></a>
+                <a href="/unsourced/"><img src="<?= get_template_directory_uri(); ?>/img/unsourcedicon.png" alt="Unsourced" /></a>
                 <p>Find journalists and see what they are writing about</p>
-                <a href="" class="btn btn-default">Read more</a>
+                <a href="/unsourced/" class="btn btn-default">Read more</a>
             </div>
             </div>
 
             <div class="l-item25">
             <div class="tool">
-                <a href=""><img src="<?= get_template_directory_uri(); ?>/img/presscomplaintsicon.png" alt="Press Complaints" /></a>
+                <a href="/presscomplaints/"><img src="<?= get_template_directory_uri(); ?>/img/presscomplaintsicon.png" alt="Press Complaints" /></a>
                 <p>Find journalists and see what they are writing about</p>
-                <a href="" class="btn btn-default">Read more</a>
+                <a href="/presscomplaints/" class="btn btn-default">Read more</a>
             </div>
             </div>
 
