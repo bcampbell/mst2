@@ -498,13 +498,20 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 
 /* strapline: background image (+ js glitch effect) + text */
 .front-strapline {
-    background-image: url(img/mediascrum.jpeg);
-/*    background-image: url(http://lorempixel.com/1200/480/); */
     height: 480px;  /* RESPONSIVE */
-    background-size: cover;
-/*    padding-bottom: 0; */
+/*      padding-bottom: 0; */
+    overflow: hidden;
+    position: relative;
 } 
 
+.front-strapline img {
+    min-width: 100%;
+    height: auto;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
 /* icky hack to center strapline */
 .strapline-outer {
@@ -845,15 +852,24 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
  *
  */
 .attribution {
-    color: #888;
+    color: #ccc;
+    background-color: rgba(0,0,0,0.5);
     display: none;
+    padding: 0rem 0.5rem;
 }
+
+.attribution a:link { color: #ccc; }
+.attribution a:visited { color: #ccc; }
 
 .front-strapline:hover .attribution {
     display: block;
 }
 
-
+.front-strapline .attribution {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
 
 /****
  * RESPONSIVE STUFF

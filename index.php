@@ -1,15 +1,51 @@
 <?php
     get_header();
+    //            <div class="attribution text-right small">Image: <a href="https://www.flickr.com/photos/oliviachow/13929786994">Media Scrum</a> by Dean Goodwin (CC BY 2.0)</div>
+    $photos = array(
+        array(
+            'file'=>'/img/strapline/mediascrum.jpeg',
+            'title'=>'Media Scrum',
+            'title_link'=>'https://www.flickr.com/photos/oliviachow/13929786994',
+            'by' => 'Dean Goodwin',
+            'licence' => 'CC BY 2.0',
+            'licence_link' => 'https://creativecommons.org/licenses/by/2.0/'
+        ),
+        array(
+            'file'=>'/img/strapline/trafalgar_square.jpeg',
+            'title'=>"STOP THE WAR COALITION RALLY TRAFALGAR SQUARE.08.10.2011",
+            'title_link'=>"https://www.flickr.com/photos/wheelzwheeler/6235092439",
+            'by'=>"Haydn",
+            'licence' => 'CC BY-NC-SA 2.0',
+            'licence_link'=>'https://creativecommons.org/licenses/by-nc-sa/2.0/'
+        )
+    );
+
+    $photo = $photos[array_rand($photos)];
+
+    function photo_attribution($photo) {
+        if(array_key_exists('by_link',$photo)) {
+            $by = "<a href=\"{$by['by_link']}\">{$photo['by']}</a>";
+        } else {
+            $by = $photo['by'];
+        }
+        ?>
+            Image: <a href="<?= $photo['title_link'] ?>"><?= $photo['title'] ?></a>
+            by <?= $by ?> (<a href="<?= $photo['licence_link'] ?>"><?= $photo['licence'] ?></a>)
+        <?php
+
+    }
+
 ?>
 
-    <div class="front front-strapline ">
+    <div class="front front-strapline">
+        <img src="<?= get_template_directory_uri(); ?><?= $photo['file'] ?>" />
+        <div class="attribution text-right small"><? photo_attribution($photo); ?></div>
         <div class="l-contain">
             <div class="strapline-outer">
                 <div class="strapline-inner">
                 <span class="strapline">Accountability for the digital age</span>
                 </div>
             </div>
-            <div class="attribution text-right small">Image: <a href="https://www.flickr.com/photos/oliviachow/13929786994">Media Scrum</a> by Dean Goodwin (CC BY 2.0)</div>
         </div>
     </div>
 
