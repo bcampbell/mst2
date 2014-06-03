@@ -1,14 +1,16 @@
 <?php
-/**
- * The template for displaying 404 pages (Not Found)
- *
- * @package WordPress
- * @subpackage Twenty_Fourteen
- * @since Twenty Fourteen 1.0
- */
-
 get_header(); ?>
-Not Found.
+    <div class="l-contain text-center">
+        <br/>
+        <br/>
+        <h1>404 - Not Found</h1>
+        <br/>
+        Perhaps you'd like to try a search?
+        <br/>
+		<?php get_search_form(); ?>
+        <br/>
+        <br/>
+    </div>
 <?php
 get_footer();
 
