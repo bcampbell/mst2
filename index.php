@@ -2,6 +2,39 @@
     get_header();
     $photos = array(
         array(
+            'file'=>'/img/strapline/310_365_standard.jpeg',
+            'title'=>'310/365 standard',
+            'title_link'=>'https://www.flickr.com/photos/aakashgautam/8497909263',
+            'by' => 'David Telford',
+            'licence' => 'CC BY-NC-SA 2.0',
+            'licence_link' => 'https://creativecommons.org/licenses/by-nc-sa/2.0/'
+        ),
+        array(
+            'file'=>'/img/strapline/bbc_london_news_studio.jpeg',
+            'title'=>'BBC London News Studio',
+            'title_link'=>'https://www.flickr.com/photos/realjv/8671470586',
+            'by' => 'John Vincent',
+            'licence' => 'CC BY-NC-SA 2.0',
+            'licence_link' => 'https://creativecommons.org/licenses/by-nc-sa/2.0/'
+        ),
+        array(
+            'file'=>'/img/strapline/data_center_ncc.jpeg',
+            'title'=>'Data Center - NCC',
+            'title_link'=>'https://www.flickr.com/photos/beraldoleal/8681750288',
+            'by' => 'Beraldo Leal',
+            'licence' => 'CC BY 2.0',
+            'licence_link' => 'https://creativecommons.org/licenses/by/2.0/'
+        ),
+        array(
+            'file'=>'/img/strapline/photographing_the_photographers.jpeg',
+            'title'=>'Photographing The Photographers',
+            'title_link'=>'https://www.flickr.com/photos/sharkbait/3284702688',
+            'by' => 'A bloke called Jerm',
+            'licence' => 'CC BY-NC-SA 2.0',
+            'licence_link' => 'https://creativecommons.org/licenses/by-nc-sa/2.0/'
+        ),
+        /*
+        array(
             'file'=>'/img/strapline/mediascrum.jpeg',
             'title'=>'Media Scrum',
             'title_link'=>'https://www.flickr.com/photos/oliviachow/13929786994',
@@ -34,6 +67,7 @@
             'licence' => 'CC BY-NC-SA 2.0',
             'licence_link' => 'https://creativecommons.org/licenses/by-nc-sa/2.0/'
         ),
+        */
     );
 
     $photo = $photos[array_rand($photos)];
