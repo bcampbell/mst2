@@ -1,6 +1,5 @@
 <?php
     get_header();
-    //            <div class="attribution text-right small">Image: <a href="https://www.flickr.com/photos/oliviachow/13929786994">Media Scrum</a> by Dean Goodwin (CC BY 2.0)</div>
     $photos = array(
         array(
             'file'=>'/img/strapline/mediascrum.jpeg',
@@ -74,35 +73,35 @@
             <div class="l-stackable">
 
             <div class="l-item25">
-            <div class="tool">
-                <a href="/journalisted/"><img src="<?= get_template_directory_uri(); ?>/img/journalistedicon.png" alt="Journalisted" /></a>
-                <p>Find journalists and see what they are writing about</p>
-                <a href="/journalisted/" class="btn btn-default">Read more</a>
-            </div>
-            </div>
-
-            <div class="l-item25">
-            <div class="tool">
-                <a href="/churnalism/"><img src="<?= get_template_directory_uri(); ?>/img/churnalismicon.png" alt="Churnalism" /></a>
-                <p>Find journalists and see what they are writing about</p>
-                <a href="/churnalism/" class="btn btn-default">Read more</a>
-            </div>
+                <a class="tool" href="/journalisted/">
+                    <img src="<?= get_template_directory_uri(); ?>/img/journalistedicon.png" alt="Journalisted" />
+                    <p>Find journalists and see what they are writing about</p>
+                    <div class="btn btn-default">Read more</div>
+                </a>
             </div>
 
             <div class="l-item25">
-            <div class="tool">
-                <a href="/unsourced/"><img src="<?= get_template_directory_uri(); ?>/img/unsourcedicon.png" alt="Unsourced" /></a>
-                <p>Find journalists and see what they are writing about</p>
-                <a href="/unsourced/" class="btn btn-default">Read more</a>
-            </div>
+                <a class="tool" href="/churnalism/">
+                    <img src="<?= get_template_directory_uri(); ?>/img/churnalismicon.png" alt="Churnalism" />
+                    <p>Helping distinguish journalism from churnalism</p>
+                    <div class="btn btn-default">Read more</div>
+                </a>
             </div>
 
             <div class="l-item25">
-            <div class="tool">
-                <a href="/presscomplaints/"><img src="<?= get_template_directory_uri(); ?>/img/presscomplaintsicon.png" alt="Press Complaints" /></a>
-                <p>Find journalists and see what they are writing about</p>
-                <a href="/presscomplaints/" class="btn btn-default">Read more</a>
+                <a class="tool" href="/unsourced/">
+                    <img src="<?= get_template_directory_uri(); ?>/img/unsourcedicon.png" alt="Unsourced" />
+                    <p>Crowd-sourcing original sources for news articles</p>
+                    <div class="btn btn-default">Read more</div>
+                </a>
             </div>
+
+            <div class="l-item25">
+                <a class="tool" href="/presscomplaints/">
+                    <img src="<?= get_template_directory_uri(); ?>/img/presscomplaintsicon.png" alt="Press Complaints" />
+                    <p>A user-friendly database of PCC complaints</p>
+                    <div class="btn btn-default">Read more</div>
+                </a>
             </div>
 
             </div> <!-- end .l-stackable -->

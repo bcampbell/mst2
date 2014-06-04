@@ -541,19 +541,37 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 
 /****/
 
-
 .tool {
+    display: block;
     max-width: 30rem;
-    padding: 1rem;
+    padding: 2rem 1rem 3rem 1rem;
     margin: 0.5rem auto;
     border: 1px solid #ccc;
     text-align: center;
+    position: relative;
 }
 
 .tool img {
     display: inline-block;
     height: 15.1rem;
 }
+
+.tool p {
+    min-height: 9rem;
+}
+
+.tool:hover {
+    border: 1px solid #000;
+    text-decoration: none;
+    color: #000;
+}
+
+.tool:hover .btn-default {
+    background: #329737;
+    color: #fff;
+}
+
+
 
 /****/
 .categorypage {
