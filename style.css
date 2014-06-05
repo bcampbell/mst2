@@ -741,9 +741,10 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 }
 img[class*="align"],
 img[class*="wp-image-"],
-img.wp-post-image, {
+img.wp-post-image {
     height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
 }
+
 img.size-full {
     max-width: 97.5%;
     width: auto; /* Prevent stretching of full-size images with height and width attributes in IE8 */
