@@ -7,11 +7,11 @@
     $dl = mst2_get_download_url();
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class("fancypub"); ?>>
-    <div class="entry-thumb hidden-sm">
-        <? if ( has_post_thumbnail() ) { ?>
-            <a href="<? the_permalink()?>"><? the_post_thumbnail();?></a>
-        <? } ?>
-    </div>
+    <? if ( has_post_thumbnail() ) { ?>
+    <a class="entry-thumb hidden-sm" href="<? the_permalink()?>"><? the_post_thumbnail();?></a>
+    <? } else { ?>
+    <div class="entry-thumb hidden-sm"></div>
+    <? } ?>
     <div class="entry-main">
         <header class="entry-header">
             <h3 class="entry-title p-name"><a href="<?= esc_url( get_permalink() ) ?>" rel="bookmark"><? the_title() ?></a></h3>
