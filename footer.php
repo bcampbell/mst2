@@ -19,7 +19,8 @@
             </div>
 
             <div class="l-item25">
-                +44 20 7848 7950
+                +44 20 7848 7950<br/>
+                <a href="http://twitter.com/newsmatters">@NewsMatters</a>
             </div>
         </div>
 
