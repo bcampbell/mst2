@@ -11,6 +11,9 @@
 
     <link href='http://fonts.googleapis.com/css?family=Cabin|Bree+Serif|Droid+Serif' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
+    <!--[if lt IE 9]>
+    <script src="<?= get_template_directory_uri(); ?>/polyfill/html5shiv.js"></script>
+    <![endif]-->
 	<?php wp_head(); ?>
 </head>
 

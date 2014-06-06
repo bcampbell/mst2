@@ -1,0 +1,17 @@
+polyfills to get things working on older browsers (mainly IE8):
+
+
+
+html5shiv.js
+
+  adds support for <header> <footer> html5 tags
+  included in <head> element
+
+rem-kdeathboo.js
+
+  adds support for REM css units.
+  included at bottom of <body>
+
+  Using a fork of the REM polyfill. See:
+  https://github.com/chuckcarpenter/REM-unit-polyfill/issues/23
+

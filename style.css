@@ -14,7 +14,6 @@ html {
 }
 
 body {
-    font-size: 16px;    /* fallback */
     font-size: 1.6rem;
     padding: 0;
     margin: 0;
@@ -388,6 +387,8 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
  * hotdog menu button
  */
 .btn-hotdog {
+    width: 34px;
+    height: 34px;
     width: 3.4rem;    
     height: 3.4rem;
     padding: 0;
@@ -409,6 +410,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 /* */
 .site-nav-hotdog {
     position: fixed;
+    background-color: #fff;
     display: block;
     height: 3rem;
     top: 11rem;

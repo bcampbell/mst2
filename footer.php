@@ -36,6 +36,10 @@
 <?php wp_footer(); ?>
 <script>
     (function() {
+        if(!document.addEventListener) {
+            // no support? just leave it with plain menus
+            return;
+        }
         // turn header menu into fancy hotdog button menu
         var container = document.getElementById('site-nav-hotdog');
         var menu = document.getElementById('menu-headermenu');
@@ -71,6 +75,9 @@
 
     })();
 </script>
+<!--[if lt IE 9]>
+<script src="<?= get_template_directory_uri(); ?>/polyfill/rem-kdeathboo.js"></script>
+<![endif]-->
 </body>
 </html>
 
