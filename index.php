@@ -88,7 +88,7 @@
 ?>
 
     <div class="front front-strapline">
-        <img src="<?= get_template_directory_uri(); ?><?= $photo['file'] ?>" />
+        <img class="strapline-img" src="<?= get_template_directory_uri(); ?><?= $photo['file'] ?>" />
         <div class="attribution text-right small"><? photo_attribution($photo); ?></div>
         <div class="l-contain">
             <div class="strapline-outer">
