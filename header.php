@@ -8,9 +8,8 @@
 	<link rel="apple-touch-icon" href="<?= get_template_directory_uri(); ?>/apple-touch-icon.png">
     <link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-
-    <link href='http://fonts.googleapis.com/css?family=Cabin|Bree+Serif|Droid+Serif' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
+    <link href='http://fonts.googleapis.com/css?family=Cabin|Bree+Serif|Droid+Serif' rel='stylesheet' type='text/css' data-norem />
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>"/>
     <!--[if lt IE 9]>
     <script src="<?= get_template_directory_uri(); ?>/polyfill/html5shiv.js"></script>
     <![endif]-->

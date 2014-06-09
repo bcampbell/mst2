@@ -76,7 +76,7 @@
     })();
 </script>
 <!--[if lt IE 9]>
-<script src="<?= get_template_directory_uri(); ?>/polyfill/rem-kdeathboo.js"></script>
+<script src="<?= get_template_directory_uri(); ?>/polyfill/rem.min.js"></script>
 <![endif]-->
 </body>
 </html>
