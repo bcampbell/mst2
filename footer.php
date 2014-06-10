@@ -47,7 +47,7 @@
 
         // show button, convert menu to fancy kind and hide it
         btn.className = btn.className.replace(/\bis-hidden\b/i,'');
-        container.className += " is-hidden";
+        container.className += " is-hidden is-fancy";
         menu.className += " menu-fancy";
 
         var menuOff = function() {
