@@ -432,7 +432,6 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
     padding: 0;
 }
 
-
 .site-logo {
     position: absolute;
     top: 3rem;
@@ -718,9 +717,16 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 
 /****/
 .searchform input[type="search"] {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     width: 100%;
-    padding: 1rem;
+    height: 100%;
+    display: block;
+    background: #ededed url(img/searchicon.svg) center right no-repeat;
+    background-size: 3.5rem 3.5rem;
+    padding: 1rem 4rem 1rem 1rem;
 }
+
 
 
 /****/
