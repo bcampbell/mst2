@@ -18,7 +18,7 @@
             <time class="dt-published published hidden-sm" datetime="<?=get_the_time('c')?>"><?= get_the_time('F Y') ?></time>
         </header>
             <? if($dl) { ?>
-            <a class="more-link" href="<?= esc_url($dl) ?>">Download</a>
+            <a class="dl-link" href="<?= esc_url($dl) ?>">Download</a>
             <? } ?>
     </div>
 </article>
