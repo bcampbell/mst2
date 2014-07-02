@@ -172,13 +172,49 @@
             <div class="front-body">
                 <h2>Latest News</h2>
                 <div>
-                <?php
+                <?php /*
                     $q = new WP_Query('category_name=mst-news&showposts=3');
                     while ($q->have_posts()) {
                         $q->the_post();
                         get_template_part( 'content', '' );
                     }
-                ?>
+                */
+				?>
+				
+				
+				<div class="entry-content">		
+		
+		
+		
+		
+		<?php rewind_posts(); ?>
+					<?php $i = 1; while (have_posts() && $i < 4) : the_post(); ?>
+					
+					<article id="post-<?php the_ID(); ?>" <?php post_class("l-rel"); ?>>
+					<header class="entry-header">
+					<?php if ( has_post_thumbnail() ) { // the current post has a thumbnail ?>
+							
+							<div class="newsThumb"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></div>
+					<?php	} else { // the current post lacks a thumbnail ?>
+							
+					<?php } ?>
+					<div class="news-details">
+					
+					<h3 class="entry-title p-name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+					 <time class="dt-published published" datetime="<?=get_the_time('c')?>"><?= get_the_time('j F Y') ?></time>
+					 </header>
+					 <div class="entry-summary p-summary hidden-sm">	
+						<?php echo limit_words(get_the_excerpt(), '30'); ?>
+					</div>
+
+					<a class="btn btn-default fook hidden-sm" href="<?= esc_url( get_permalink() ) ?>">Read more</a>
+					</div>
+					</article>
+				<?php $i++; endwhile; ?>
+
+				
+		<div class="line">&nbsp;</div>	
+				
                 </div>
                 <div class="text-center"><a class="more-link" href="/mst-news">&gt; More news</a></div>
             </div>

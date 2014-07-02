@@ -41,7 +41,7 @@ h1,h2,h3,h4,h5,h6 {
 
 h1 { font-size:244%; }
 h2 { font-size:195%;}
-h3 { font-size:156%;}
+h3 { font-size:156%; margin-top:0;}
 h4 { font-size:125%;}
 h5 {font-size:100%; }
 h6 {font-size:80%; }
@@ -249,10 +249,10 @@ img {
 
 /* pull content into place horizontally */
 .l-contain {
-    max-width: 965px;
     min-width: 300px;   /* allow 10px margins */
     padding: 0;
     margin: auto;
+    max-width: 965px;
 }
 
 .l-rel {
@@ -292,7 +292,8 @@ img {
 
 /* RESPONSIVE: these change as screen shrinks */
 .l-item25 { width: 25%; }
-.l-item50 { width: 50%; }
+.l-item50 {
+    width: 50%; }
 .l-item75 { width: 75%; }
 
 /*
@@ -306,7 +307,13 @@ img {
 }
 */
 
-
+.footer-r {   
+    width: 50%;
+    padding-left: 15rem;
+}
+.footer-r a {
+    color: #fff;
+}
 
 /* NOTES
 Hover states:
@@ -412,11 +419,12 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
     position: fixed;
     background-color: #fff;
     display: block;
-    height: 3rem;
     top: 11rem;
     width: 100%;
     z-index: 1;
     text-align: center;
+    height: 3rem;
+    max-width: none;
 }
 .site-nav-hotdog.is-hidden {
     display: none;
@@ -453,16 +461,24 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
     padding: 5rem 0;
     font-size: 1.5rem;
 }
+.site-footer p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;    
+}
+br.both {
+    clear: both;
 
-.site-footer a:link { color: #fff; }
+}
 .site-footer a:visited { color: #fff; }
 .site-footer a:hover { color: #07c55c; }
 
 .site-footer h3 {
     font-family: 'Cabin', sans-serif;
-    font-size: 2rem;
+    font-size: 2.6rem;
     text-transform: uppercase;
     color: #fff;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 /****
@@ -471,7 +487,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 
 /* icky spacing hack */
 .front-body {
-    padding-bottom: 9rem;
+    padding-bottom: 4rem;
 }
 
 .front h2 {
@@ -499,6 +515,9 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
     background-color: #ededed;
 }
 
+.front-publications .text-center {
+    padding-top: 40px;
+}
 /* actually, this'll be an image */
 .front-orwell h2 {
     color: #fff;
@@ -668,8 +687,8 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 .page .entry-header,
 .single .entry-header {
     background-color: #ededed;
-    padding: 4rem 0 8rem 0;
     text-align: center;
+    padding: 4rem 0 4rem 0;
 }
 
 
@@ -852,7 +871,7 @@ img.size-full {
 
 .menu-item:first-child {
     border-left: none;
-    padding-left: 0;
+    /* padding-left: 0; */
 }
 
 .menu-item a:link { color: #329737; }
@@ -863,9 +882,26 @@ img.size-full {
  */
 .menu-footermenu-container {
     margin-top: 3rem;
+    text-align: center;
 }
 
+/***
+ * homepage 
+ */
 
+ .newsThumb {
+    float: left;
+    margin-right: 4px;
+    width: 160px;
+ }
+ .news-details {
+    float: left;
+    width: 75%;
+ }
+ .entry-content {
+    clear: both; 
+    display: block;   
+ }
 /***
  * fancy menu (used for site nav)
  */
@@ -914,6 +950,7 @@ img.size-full {
     font-size: 1.1rem;
     padding: 0;
     margin-top: 1rem;
+    text-align: center;
 }
 .copyright a {
     color: inherit;
@@ -961,6 +998,10 @@ img.size-full {
     .strapline-outer { height: 200px; }
     
     .post { margin: 0rem 0; }
+
+    .footer-r {   
+    padding-left: 0;
+    }   
 }
 
 /* medium - eg tablet, desktop */
@@ -972,5 +1013,8 @@ img.size-full {
 
     .front-strapline { height: 300px; } 
     .strapline-outer { height: 300px; }
-}
 
+    .footer-r {   
+    padding-left: 0;
+    }   
+}

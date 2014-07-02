@@ -3,25 +3,37 @@
     <div class="l-contain">
         <h3>Media Standards Trust</h3>
         <div class="l-stackable">
+            
+
             <div class="l-item50">
-                <p>The Media Standards Trust is an independent registered charity that fosters quality, transparency and accountability for the digital age. We develop digital tools, conduct research, organise debates and contribute to public policy.</p>
-                <p>
-                Registered charity number 1113680<br/>
-                Company number 05514310    
-                </p>
+                <p>The Media Standards Trust is an independent registered 
+                    charity that fosters quality, transparency and accountability 
+                    for the digital age. We develop digital tools, conduct research, organise debates and contribute to public policy.</p>
+        
             </div>
 
-            <div class="l-item25">
-                King's College London<br/>
+            <div class="l-item50 footer-r">
+                <p>King's College London<br/>
                 Virginia Woolf Building<br/>
                 22 Kingsway<br/>
-                London WC2B 6NR<br/>
+                London WC2B 6NR</p>
             </div>
 
-            <div class="l-item25">
-                +44 20 7848 7950<br/>
-                <a href="http://twitter.com/newsmatters">@NewsMatters</a>
+        </div>
+        <div class="l-stackable">
+
+            <div class="l-item50">
+
+                <p>Registered charity number 1113680<br/>
+                Company number 05514310</p>
+
             </div>
+
+            <div class="l-item50 footer-r">                
+                <p>+44 20 7848 7950<br/>
+                <a href="http://twitter.com/newsmatters">@NewsMatters</a></p>
+            </div>
+ 
         </div>
 
         <?php wp_nav_menu( array(
