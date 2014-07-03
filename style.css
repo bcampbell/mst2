@@ -580,6 +580,25 @@ br.both {
     margin-bottom: 4rem;
 }
 
+
+/****
+ * events category page
+ */
+
+.category-events {
+    background-color: #AFDA4A;
+    color: #333;
+}
+
+.category-events .category-header {
+    background-color: #AFDA4A;
+    color: #333;
+    padding: 2rem 0 2rem 0;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+
 /****/
 .archive-description {
     font-family: 'Bree Serif', serif;

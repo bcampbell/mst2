@@ -190,27 +190,29 @@
             <div class="front-body">
                 <h2>Upcoming events</h2>
 
-                <!-- dummy event -->
-                <div class="event">
-                    <div class="l-stackable text-center">
+<?php 
+    $today = date("c");
+    $event_q = array(
+        'category_name' => 'events',
+        'meta_query' => array(
+            array(
+                'key' => 'eventdate',
+                'value' => $today,
+                'compare' => '>='
+            )
+        ),
+        'order_by' => 'meta_value',
+        'order' => 'ASC',
+        'posts_per_page'=>-1,
+    );
 
-                    <div class="l-item25">
-                        <time class="dt-published published dateicon" datetime="2014-08-11"><span class="dateicon-month">July</span><span class="dateicon-day">11</span></time>
-                    </div>
-                    <div class="l-item75 text-left">
-                        <div class="event-main">
-                            <h3>Panel discussion</h3>
-                            <p>The Media Standards Trust is organising a panel discussion at the '<a href="http://www.kcl.ac.uk/sspp/kpi/events/eventrecords/2014/commongood.aspx">New Politics of the Common Good</a>' conference at King's College.<br/>
-                        '<em>Will Facebook tell you if your council is corrupt?</em>' will examine the decline of the local press, the rise of hyperlocal, the role of social
-                        media (Facebook in particular), and the democratic deficit.</p>
-                        <p><a href="https://www.eventbrite.co.uk/e/power-to-people-the-new-politics-of-the-common-good-tickets-11154925683">Book here</a> (Eventbrite)</p>
-                        </div>
-                    </div>
-                    </div>
-                </div>
+    $q = new WP_Query( $event_q );
+    while ($q->have_posts()) {
+        $q->the_post();
+        get_template_part( 'content', 'event' );
+    }
+?>
             </div>
-
-
         </div> <!-- end .l-contain -->
     </div>
 

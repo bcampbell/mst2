@@ -20,7 +20,14 @@ get_header();
             </div>
         <?php } ?>
         </div>
-    <?php } else { ?>
+        <?php } else if (is_category('events')) { ?>
+        <div>
+        <?php while ( have_posts() ) { ?>
+            <? the_post(); ?>
+                <? get_template_part( 'content', 'event' ); ?>
+            <?php } ?>
+        </div>
+        <?php } else { /* default */?>
         <div>
         <?php while ( have_posts() ) { ?>
             <? the_post(); ?>
