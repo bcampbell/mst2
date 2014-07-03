@@ -179,6 +179,7 @@
                         get_template_part( 'content', '' );
                     }
 				?>
+                </div>
                 <div class="text-center"><a class="more-link" href="/mst-news">&gt; More news</a></div>
             </div>
         </div> <!-- end .l-contain -->

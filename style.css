@@ -471,10 +471,12 @@ br.both {
 .front-publications {
     background-color: #ededed;
 }
-
+/*
 .front-publications .text-center {
     padding-top: 40px;
 }
+*/
+
 /* actually, this'll be an image */
 .front-orwell h2 {
     color: #fff;
@@ -484,6 +486,10 @@ br.both {
 }
 
 
+.front-news .more-link {
+    margin-top: 5rem;
+    display: block;
+}
 
 /* strapline: background image (+ js glitch effect) + text */
 .front-strapline {
@@ -617,8 +623,8 @@ br.both {
     float: left;
     margin-right: 1rem;
     display: block;
-    width: 15.2rem;   /* TODO: RESPONSIVE? */
-    height: 21.6rem;
+    width: 15.0rem;   /* TODO: RESPONSIVE? */
+    height: 20.0rem;
 }
 
 .entry-main {
