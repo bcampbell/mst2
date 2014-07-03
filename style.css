@@ -756,6 +756,9 @@ br.both {
     margin: auto;
 }
 
+.archive .post.event {
+    border: none;
+}
 
 .event h3 {
     color: #000;
