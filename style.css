@@ -296,16 +296,6 @@ img {
     width: 50%; }
 .l-item75 { width: 75%; }
 
-/*
-.l-horiz {
-    outline: 1px solid red;
-}
-
-.l-horiz>* {
-    display:inline-block;
-    outline: 1px solid green;
-}
-*/
 
 .footer-r {   
     width: 50%;
@@ -314,39 +304,6 @@ img {
 .footer-r a {
     color: #fff;
 }
-
-/* NOTES
-Hover states:
-
-Tools
-background fill
-JL: #fdefc7
-unsourced: fabfc0
-churn: fdefc7
-press complaints: b2e1f4
-
-News
-Read more green
-#329737
-
-
-
-Menu - rollover text colour #808080
-
-Body text links green - #07c55c
-
-body text:
-
-font: Droid Serif Regular
-size: 16px
-color: #333333
-line-height: 28px
-
-p spacing:
-40px 
-
-
-*/
 
 
 input {
@@ -656,6 +613,27 @@ br.both {
     margin: 2rem 0; /* RESPONSIVE */
 }
 
+.entry-thumb {
+    float: left;
+    margin-right: 1rem;
+    display: block;
+    width: 15.2rem;   /* TODO: RESPONSIVE? */
+    height: 21.6rem;
+}
+
+.entry-main {
+}
+
+.post:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+
 .dt-published {
     text-transform: uppercase;
     font-family: 'Cabin', sans-serif;
@@ -667,7 +645,7 @@ br.both {
 }
 
 .p-summary {
-    width: 75%;
+    width: 75%; /* room for a "read more" button */
 }
 
 
@@ -706,17 +684,13 @@ br.both {
 }
 
 
-/* fancypub - for publications in lists, showing thumbnails and download links */
+/* fancypub - for publications in 2-column lists. Smaller titles, outline around thumbnail */
 
 .archive .post.fancypub {
     border: none;
     padding-left: 0;
 }
 
-.archive .fancypub .entry-thumb {
-    float: left;
-    margin-right: 1rem;
-}
 
 .archive .fancypub .entry-thumb img {
     border: 1px solid #ccc;
@@ -734,15 +708,6 @@ br.both {
     position: absolute;
     bottom: 2rem;
     right: 0;
-}
-
-/****
- * post thumbnails (aka 'featured image')
- */
-.entry-thumb {
-    display: block;
-    width: 15.2rem;   /* TODO: RESPONSIVE? */
-    height: 21.6rem;
 }
 
 
@@ -885,23 +850,6 @@ img.size-full {
     text-align: center;
 }
 
-/***
- * homepage 
- */
-
- .newsThumb {
-    float: left;
-    margin-right: 4px;
-    width: 160px;
- }
- .news-details {
-    float: left;
-    width: 75%;
- }
- .entry-content {
-    clear: both; 
-    display: block;   
- }
 /***
  * fancy menu (used for site nav)
  */

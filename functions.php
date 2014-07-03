@@ -26,6 +26,9 @@ function mst2_setup() {
     add_filter('next_posts_link_attributes', 'mst2_next_posts_link_attributes');
     add_filter('previous_posts_link_attributes', 'mst2_previous_posts_link_attributes');
 
+    // override the automatic-excerpt length (wp default is 55)
+    add_filter('excerpt_length', 'mst2_excerpt_length', 999);
+    add_filter( 'excerpt_more', 'mst2_excerpt_more' );
 }
 add_action( 'after_setup_theme', 'mst2_setup' );
 
@@ -36,6 +39,15 @@ function mst2_previous_posts_link_attributes() {
 
 function mst2_next_posts_link_attributes() {
     return 'class="btn btn-default" rel="next"';
+}
+
+function mst2_excerpt_length($length) {
+    return 30;
+}
+
+function mst2_excerpt_more( $more ) {
+    return " &hellip;";
+//    return '... <br /><a href="'. get_permalink() . '" class="arrow">' . __('More ', '') . '</a>';
 }
 
 // get the url of the first link in the post
@@ -51,36 +63,6 @@ function mst2_get_download_url() {
 }
 
 
-// Sets the post excerpt length to 200 characters.
 
-add_filter('excerpt_length', 'my_excerpt_length');
 
-function my_excerpt_length($length) {
-
-        return 40;
-    
-}
-
-function limit_words($string, $word_limit) {
- 
-	// creates an array of words from $string (this will be our excerpt)
-	// explode divides the excerpt up by using a space character
- 
-	$words = explode(' ', $string);
- 
-	// this next bit chops the $words array and sticks it back together
-	// starting at the first word '0' and ending at the $word_limit
-	// the $word_limit which is passed in the function will be the number
-	// of words we want to use
-	// implode glues the chopped up array back together using a space character
- 
-	return implode(' ', array_slice($words, 0, $word_limit));
- 
-}
-
-function mst_excerpt_more() {
-	
-	return '... <br /><a href="'. get_permalink() . '" class="arrow">' . __('More ', '') . '</a>';
-
-}
 ?>
