@@ -29,13 +29,21 @@
 </header>
 
 <div id="site-nav-hotdog" class="site-nav-hotdog">
-    <div class="l-contain">
+    <div id="navigation-wrapper">
     <?php wp_nav_menu( array(
         'theme_location'=>'header-menu',
         //'menu_class'=>'menu menu-fancy',
         'depth'=>1,
         'container'=>'nav'
         ) ); ?>
+
+            <ul class="social">
+                <li><a href="https://twitter.com/NewsMatters" class="icon twitter">Twitter</a></li>
+                <li><a href="https://www.facebook.com/pages/Media-Standards-Trust/152015511494934" class="icon facebook">Facebook</a></li>
+                <!-- <li><a href="" class="icon googleplus">Google+</a></li> 
+                <li><a href="" class="icon rss">RSS</a></li>-->
+            </ul>
+        
     </div>
 </div>
 

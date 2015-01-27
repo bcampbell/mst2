@@ -31,17 +31,17 @@ pre {
 
 h1,h2,h3,h4,h5,h6 {
     color: #222;
-    margin: 1rem 0;
     line-height: 1.42; 
 /*    margin: 0; */
     padding: 0;
     font-family: 'Droid Serif', serif;
     font-weight: normal;
+    margin: 1rem 0;
 }
 
 h1 { font-size:244%; }
 h2 { font-size:195%;}
-h3 { font-size:156%; margin-top:0;}
+h3 { font-size:136%; margin-top:0; letter-spacing:-0.05rem; margin-bottom:0.3rem;}
 h4 { font-size:125%;}
 h5 {font-size:100%; }
 h6 {font-size:80%; }
@@ -63,21 +63,32 @@ p {
     padding: 0;
     margin: 0 0 0.75rem 0;
 }
-
-
+h1 {
+    font-family: 'Bree Serif', serif;
+    line-height: 1.2;
+    letter-spacing: -0.01rem; 
+}
+h2 {
+    font-family: 'Cabin', sans-serif;
+    text-transform: uppercase;
+    font-size: 2.3rem;
+    padding: 2.5rem 0 2rem 0;
+}
 a {
     text-decoration: none;
-    color: #000;
+    color: #329737;
 }
 a:visited {
     color: #000;
 }
 
 a:hover {
-    text-decoration: underline;
-    color: #07c55c
+    text-decoration: none;
+    color: #329737;
 }
-
+.site-header-inner a:hover {
+    text-decoration: underline;
+}
 label {
     font-weight: bold;
 }
@@ -152,7 +163,12 @@ img {
 
 .btn-default:hover {
     background: #329737;
-    color: #fff;
+    color: #fff!important;
+}
+
+.front-tools .btn-default:hover {
+    background: #000;
+    color: #fff!important;
 }
 
 .btn-primary { }
@@ -169,6 +185,20 @@ img {
 
 .btn-link:hover {
   text-decoration: underline;
+}
+
+
+.pagination a.btn {
+    padding: 0.6rem 1.2rem 1rem 1.2rem;
+    font-size: 2rem;
+}
+.pagination {
+    margin-top: 4.5rem;
+    margin-bottom: 1.9rem;
+}
+.category-publications .pagination {
+    margin-top: 0;
+    margin-bottom: 1.9rem;
 }
 
 /* alerts */
@@ -264,7 +294,8 @@ img {
     display: block;
     padding: 0;
     font-size: 0;   /* cheesiness to remove whitespace between elements */
-    margin-right: -2rem; /* cheesiness to compensate for item gutters */
+    margin-right: -2rem;
+    margin-top: 0; /* cheesiness to compensate for item gutters */
 }
 
 /*
@@ -309,16 +340,30 @@ img {
 input {
     font-family: 'Cabin', sans-serif;
     font-size: 1.4rem;
-    color: #333;
     background-color: #ededed;
     border: none;
     padding: 0.4rem;
+    color: #333;
 }
 /****/
 
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
     color: #333;
 }
+
+
+
+.front a:link {
+    color: #000;
+}
+.front a.btn:link {
+    color: #FFF;
+}
+.front a:hover {
+    color: #329737;
+    text-decoration: none;
+}
+
 
 /* MODULES */
 
@@ -333,6 +378,13 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
     top:0;
     width:100%;
     z-index: 1;
+    border-bottom: solid 1px #ededed;
+/*
+    remoed the faded line JSC 17/11/14
+    -moz-box-shadow: 0px 0px 8px 2px #efefef;
+    -webkit-box-shadow: 0px 0px 8px 2px #efefef;
+    box-shadow: 0px 0px 8px 2px #efefef;
+*/    
 }
 
 .site-header-inner {
@@ -409,8 +461,11 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 
 .site-content {
     margin-top: 11.0rem;
+    padding-bottom: 7.5rem;
 }
-
+body.home .site-content {
+    padding-bottom: 0;
+}
 
 .site-footer {
     background-color: #333;
@@ -431,11 +486,11 @@ br.both {
 
 .site-footer h3 {
     font-family: 'Cabin', sans-serif;
-    font-size: 2.6rem;
+    font-size: 2.2rem;
     text-transform: uppercase;
     color: #fff;
-    text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
+    /* text-align: center; */
 }
 
 /****
@@ -444,11 +499,11 @@ br.both {
 
 /* icky spacing hack */
 .front-body {
-    padding-bottom: 4rem;
+    padding-bottom: 8.5rem;
 }
 
 .front h2 {
-    padding: 5rem 0 5rem 0;
+    padding: 7rem 0 3rem 0;
     font-family: 'Cabin', sans-serif;
     font-size: 3.2rem;
     /*line-height: 3.84rem; */
@@ -467,9 +522,17 @@ br.both {
     background-color: #000;
 }
 
+.front-news .breadcrumbs {
+    display: none;    
+}
+.cat-list .breadcrumbs {
+    display: none;    
+}
 
 .front-publications {
     background-color: #ededed;
+}
+.newslist {    
 }
 /*
 .front-publications .text-center {
@@ -484,10 +547,12 @@ br.both {
 .front-orwell a {
     color: #fff;
 }
-
+.orwell-wrapper a.more-link, {
+    color: #fff!important;
+}
 
 .front-news .more-link {
-    margin-top: 5rem;
+    margin-top: 4rem;
     display: block;
 }
 
@@ -527,20 +592,23 @@ br.both {
     font-family: 'Bree Serif', serif;
     font-size: 4.0rem;
     line-height: 4.5rem;
-    padding: 1.0rem 2.0rem;
+    padding: 1.0rem 2.0rem 2.0rem 2.0rem;
     background-color: #000;
     color: #fff;
 }
 
 
 /****/
-
+.tool-icon {
+    height: 92px;
+    overflow: hidden;
+}
 .tool {
     display: block;
     max-width: 30rem;
-    padding: 2rem 1rem 3rem 1rem;
+    padding: 3.5rem 1rem 4rem 1rem;
     margin: 0.5rem auto;
-    border: 1px solid #ccc;
+    border: 1px solid #999999;
     text-align: center;
     position: relative;
 }
@@ -552,17 +620,24 @@ br.both {
 
 .tool p {
     min-height: 9rem;
+    color: #000; 
 }
 
-.tool:hover {
-    border: 1px solid #000;
-    text-decoration: none;
-    color: #000;
+.tool a:hover {
+    color: #000;    
 }
 
-.tool:hover .btn-default {
-    background: #329737;
-    color: #fff;
+.tool-journalisted:hover {
+    background-color: #d4d4d4;
+}
+.tool-unsourced:hover {
+    background-color: #fabfc0;
+}
+.tool-churnalism:hover {
+    background-color: #fdefc7;
+}
+.tool-presscomplaints:hover {
+    background-color: #b2e1f4;
 }
 
 
@@ -575,9 +650,9 @@ br.both {
 /****/
 .category-header {
     background-color: #ededed;
-    padding: 4rem 0 8rem 0;
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 9rem;
+    padding: 4rem 0 12.5rem 0;
 }
 
 
@@ -604,6 +679,7 @@ br.both {
     font-family: 'Bree Serif', serif;
     font-size: 2.4rem;
     line-height: 3rem;
+    color: #333;
 }
 
 
@@ -612,8 +688,13 @@ br.both {
 .more-link {
     font-family: 'Bree Serif', serif;
     color: #000;
-    font-size: 1.7rem;
+    font-size: 2rem;
 }
+
+svg {
+  fill: currentColor;
+}
+
 
 .dl-link {
     font-family: 'Bree Serif', serif;
@@ -622,6 +703,9 @@ br.both {
     background: url(img/downloadicon.svg) bottom left no-repeat;
     background-size: 1.6rem 1.6rem;
     padding-left: 1.6rem;
+}
+.dl-link:hover {
+    color: #329737;
 }
 
 /***
@@ -643,30 +727,51 @@ br.both {
     margin-right: 1rem;
     display: block;
     width: 15.0rem;   /* TODO: RESPONSIVE? */
-    height: 20.0rem;
 }
 
 .entry-main {
 }
-
+.breadcrumbs {
+   text-align: left; 
+   font-size: 1.6rem;
+   color: #666;
+   font-family: 'Bree Serif', serif;
+   max-width: 965px;
+   margin: auto;
+   padding: 1.2rem 0 1rem 0;
+}
+.breadcrumbs a {
+    color: #666;
+    display: inline;
+}
 .post:after {
     visibility: hidden;
     display: block;
     font-size: 0;
     content: " ";
-    clear: both;
     height: 0;
+    clear: both;
+}
+.breadcrumbs .post {
+    visibility: inherit;
+    display: inline;
+    font-size: auto;
+    height: auto;
+    clear: auto;
+    margin: auto!important;
 }
 
 
 .dt-published {
     text-transform: uppercase;
     font-family: 'Cabin', sans-serif;
+    padding-bottom: 0.2rem;
+    display: block;
 }
 
 .e-content {
     width: 60rem;
-    margin: 4rem auto 4rem auto;
+    margin: 4rem auto 0 auto;
 }
 
 .p-summary {
@@ -691,7 +796,7 @@ br.both {
 .single .entry-header {
     background-color: #ededed;
     text-align: center;
-    padding: 4rem 0 4rem 0;
+    padding: 0 0 9.5rem 0;
 }
 
 
@@ -699,14 +804,35 @@ br.both {
 
 .archive .post {
     border-bottom: 1px solid #999;
-    padding-left: 2rem;
     padding-bottom: 2rem;
+    margin-top: 0;
+    padding-left: 2rem;;
 }
 
 .archive .post:first-child {
     border-top: 1px solid #999;
-    padding-top: 1.5rem;
+    padding-top: 0;
+    margin-top: 0;
 }
+
+/* homepage news list  */
+
+.newslist .archive .post,
+.cat-list .archive .post {
+    border-bottom: 10px solid #999;
+    padding-bottom: 2rem;
+    margin-top: 2rem;
+    padding-left: 2rem;
+}
+
+.newslist .post:first-child,
+.cat-list .post:first-child {
+    padding-top: 2rem;
+    margin-top: 0;
+    padding-bottom: 2rem;
+    border-top: 1px solid #999;
+}
+
 
 
 /* fancypub - for publications in 2-column lists. Smaller titles, outline around thumbnail */
@@ -718,7 +844,7 @@ br.both {
 
 
 .archive .fancypub .entry-thumb img {
-    border: 1px solid #ccc;
+ 
 }
 
 .archive .fancypub .p-name {
@@ -735,6 +861,10 @@ br.both {
     right: 0;
 }
 
+.search-results .entry-main {
+    border-top: 1px solid #999;
+    padding: 1.5rem 0;
+}
 
 /****/
 .searchform input[type="search"] {
@@ -743,12 +873,16 @@ br.both {
     width: 100%;
     height: 100%;
     display: block;
-    background: #ededed url(img/searchicon.svg) center right no-repeat;
-    background-size: 3.5rem 3.5rem;
+    background: #ededed url(img/searchicon.png) 330px 10px no-repeat;
+    /* background-size: 3.5rem 3.5rem; */
     padding: 1rem 4rem 1rem 1rem;
+    color: red!important;
 }
 
+.searchform  {
+    color: #333;
 
+}
 
 /****/
 .event {
@@ -773,17 +907,31 @@ br.both {
 .entry-thumb img,
 .comment-content img,
 .widget img {
-    max-width: 97.5%; /* Fluid images for posts, comments, and widgets */
+    
+}
+body.category-publications .entry-thumb {
+    width: 150px;
+    height: 214px;
+    
+}
+.entry-thumb {
+    border: solid 1px #999; 
+}
+.entry-thumb img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;  
 }
 img[class*="align"],
 img[class*="wp-image-"],
-img.wp-post-image {
-    height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+img.wp-post-image { /* Make sure images with WordPress-added height and width attributes are scaled correctly */
 }
 
 img.size-full {
     max-width: 97.5%;
-    width: auto; /* Prevent stretching of full-size images with height and width attributes in IE8 */
+    height: 100%;
+    
+    /* width: auto; /* Prevent stretching of full-size images with height and width attributes in IE8 */
 }
 
 /****
@@ -855,15 +1003,15 @@ img.size-full {
 
 .menu-item {
     display: inline;
-    padding: 0 1rem;
     margin: 0;
-    border-left: 1px solid #fff;
 
     color: #329737;
+    border-left: 1px solid #fff;
 }
 
 .menu-item:first-child {
     border-left: none;
+    padding-left: 0;
     /* padding-left: 0; */
 }
 
@@ -875,7 +1023,11 @@ img.size-full {
  */
 .menu-footermenu-container {
     margin-top: 3rem;
-    text-align: center;
+}
+
+.menu-footermenu-container ul li {
+    padding-left: 2.1rem;
+    padding-right: 2.1rem;
 }
 
 /***
@@ -884,10 +1036,52 @@ img.size-full {
 
 .menu-fancy {
     background-color: #000;
-    padding: 6rem 0 6rem 0;
+    padding: 7.5rem 0 0 0;
 }
 
+#navigation-wrapper {
+    padding: 0 0 60rem 0;
+    background-color: #000;
+    display: block;
+    height: 1600px;
+}
+.social {
+    display: inline-block;
+    margin-top: 60px;
+}
+ul.social {
+    padding: 0 0 0 10px;
+}
+ul.social li {
+    float : left;
+    display: block;
+}
+.icon {
+    width: 29px;
+    height: 29px;
+    display: block;
+    text-indent: -9999px;
+    background-image:url(img/social.png);
+    background-repeat: no-repeat;
+    margin-right: 10px;
+}
 
+.twitter {
+    background-position: 0px 0px;
+}
+.facebook {
+    background-position: -30px 0px;
+}
+.googleplus {
+    background-position: -60px 0px;
+}
+.rss {
+    background-position: -90px 0px;
+}
+.site-footer .social {
+    padding: 0;
+    margin-top: 10px;
+}
 .menu-fancy .menu-item {
     display: block;
     color: #fff;
@@ -897,7 +1091,6 @@ img.size-full {
     font-family: 'Cabin', sans-serif;
     font-size: 2.1rem;
     line-height: 6.8rem;
-
     max-width: 60rem;
     margin: auto;
 }
@@ -925,8 +1118,7 @@ img.size-full {
 .copyright {
     font-size: 1.1rem;
     padding: 0;
-    margin-top: 1rem;
-    text-align: center;
+    margin-top: 0;
 }
 .copyright a {
     color: inherit;

@@ -107,7 +107,7 @@
             <div class="l-stackable">
 
             <div class="l-item25">
-                <a class="tool" href="/journalisted/">
+                <a class="tool tool-journalisted" href="/journalisted/">
                     <img src="<?= get_template_directory_uri(); ?>/img/journalistedicon.png" alt="Journalisted" />
                     <p>Find journalists and see what they are writing about</p>
                     <div class="btn btn-default">Read more</div>
@@ -115,15 +115,7 @@
             </div>
 
             <div class="l-item25">
-                <a class="tool" href="/churnalism/">
-                    <img src="<?= get_template_directory_uri(); ?>/img/churnalismicon.png" alt="Churnalism" />
-                    <p>Helping distinguish journalism from churnalism</p>
-                    <div class="btn btn-default">Read more</div>
-                </a>
-            </div>
-
-            <div class="l-item25">
-                <a class="tool" href="/unsourced/">
+                <a class="tool tool-unsourced" href="/unsourced/">
                     <img src="<?= get_template_directory_uri(); ?>/img/unsourcedicon.png" alt="Unsourced" />
                     <p>Crowd-sourcing original sources for news articles</p>
                     <div class="btn btn-default">Read more</div>
@@ -131,7 +123,15 @@
             </div>
 
             <div class="l-item25">
-                <a class="tool" href="/presscomplaints/">
+                <a class="tool tool-churnalism" href="/churnalism/">
+                    <img src="<?= get_template_directory_uri(); ?>/img/churnalismicon.png" alt="Churnalism" />
+                    <p>Helping distinguish journalism from churnalism</p>
+                    <div class="btn btn-default">Read more</div>
+                </a>
+            </div>
+
+            <div class="l-item25">
+                <a class="tool tool-presscomplaints" href="/presscomplaints/">
                     <img src="<?= get_template_directory_uri(); ?>/img/presscomplaintsicon.png" alt="Press Complaints" />
                     <p>A user-friendly database of PCC complaints</p>
                     <div class="btn btn-default">Read more</div>
@@ -149,8 +149,8 @@
     ?>
     <div class="front front-publications archive">
         <div class="l-contain">
-            <div class="front-body">
-            <h2>Latest Publications</h2>
+            <div class="front-body front-publications">
+            <h2><a href="/publications">Latest Publications</h2>
             <div class="l-stackable">
             <?php
                 $q = new WP_Query('category_name=publications&showposts=4');
@@ -166,12 +166,11 @@
             </div>
         </div> <!-- end .l-contain -->
     </div>
-
     <div class="front front-news archive">
         <div class="l-contain">
             <div class="front-body">
-                <h2>Latest News</h2>
-                <div>
+                <h2><a href="/mst-news">Latest News</a></h2>
+                <div class="newslist">
                 <?php 
                     $q = new WP_Query('category_name=mst-news&showposts=3');
                     while ($q->have_posts()) {
@@ -185,6 +184,8 @@
         </div> <!-- end .l-contain -->
     </div>
 
+    <!-- events module -->
+    <!-- temporarly disabled 
     <div class="front front-events archive">
         <div class="l-contain">
             <div class="front-body">
@@ -214,7 +215,8 @@
 ?>
             </div>
         </div> <!-- end .l-contain -->
-    </div>
+    <!-- temporarly disabled 
+    </div> <!-- end events module -->
 
     <div class="front front-orwell">
         <div class="l-contain text-center">

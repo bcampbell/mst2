@@ -13,6 +13,8 @@ function mst2_setup() {
 	
 	add_image_size( 'news', 150, 200, true ); // News thumbnail (cropped)
 
+    add_image_size( 'tools-previews', 589 ); // 589 pixels wide (and unlimited height)
+
 	register_nav_menus( array(
         'header-menu'=>'Site header menu',
         'footer-menu'=>'Site footer menu'

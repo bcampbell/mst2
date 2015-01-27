@@ -27,22 +27,30 @@
                 <p>Registered charity number 1113680<br/>
                 Company number 05514310</p>
 
-            </div>
-
-            <div class="l-item50 footer-r">                
-                <p>+44 20 7848 7950<br/>
-                <a href="http://twitter.com/newsmatters">@NewsMatters</a></p>
-            </div>
- 
-        </div>
-
-        <?php wp_nav_menu( array(
+                <?php wp_nav_menu( array(
             'theme_location'=>'footer-menu',
             'depth'=>1,
             'container'=>'nav'
             ) ); ?>
 
-        <div class="copyright">&copy; Media Standards Trust 2014. Design by <a href="http://www.double-sided.com/">Double Sided</a></div>
+        <div class="copyright">&copy; Media Standards Trust <?php echo date('Y') ?>. Design by <a href="http://www.double-sided.com/">Double Sided</a></div>
+
+            </div>
+
+            <div class="l-item50 footer-r">                
+                <p>+44 20 7848 7950<br/>
+                <a href="http://twitter.com/newsmatters">@NewsMatters</a></p>
+                <ul class="social">
+                    <li><a href="https://twitter.com/NewsMatters" class="icon twitter">Twitter</a></li>
+                    <li><a href="https://www.facebook.com/pages/Media-Standards-Trust/152015511494934" class="icon facebook">Facebook</a></li>
+                    <!-- <li><a href="" class="icon googleplus">Google+</a></li> 
+                    <li><a href="" class="icon rss">RSS</a></li>-->
+                </ul>
+            </div>
+ 
+        </div>
+
+        
     </div> <!-- end .l-contain -->
 </footer>
 <?php wp_footer(); ?>

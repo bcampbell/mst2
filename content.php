@@ -10,6 +10,12 @@
     <? */ } ?>
     <div class="entry-main">
         <header class="entry-header">
+            <div class="breadcrumbs">
+                <?php if(function_exists('bcn_display'))
+                {
+                    bcn_display();
+                }?>
+            </div>
             <h3 class="entry-title p-name"><a href="<?= esc_url( get_permalink() ) ?>" rel="bookmark"><? the_title() ?></a></h3>
             <time class="dt-published published" datetime="<?=get_the_time('c')?>"><?= get_the_time('j F Y') ?></time>
         </header>
@@ -20,6 +26,12 @@
     </div>
 <?php } else { ?>
     <header class="entry-header">
+        <div class="breadcrumbs">
+            <?php if(function_exists('bcn_display'))
+            {
+                bcn_display();
+            }?>
+        </div>
     <div class="l-contain">
     <h1 class="entry-title p-name"><? the_title(); ?></h1>
     <time class="dt-published published" datetime="<?=get_the_time('c')?>"><?= get_the_time('j F Y') ?></time>
