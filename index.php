@@ -185,7 +185,6 @@
     </div>
 
     <!-- events module -->
-    <!-- temporarly disabled 
     <div class="front front-events archive">
         <div class="l-contain">
             <div class="front-body">
@@ -215,7 +214,6 @@
 ?>
             </div>
         </div> <!-- end .l-contain -->
-    <!-- temporarly disabled 
     </div> <!-- end events module -->
 
     <div class="front front-orwell">

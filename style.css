@@ -1056,7 +1056,7 @@ ul.social li {
     float : left;
     display: block;
 }
-.icon {
+.socialicon {
     width: 29px;
     height: 29px;
     display: block;
@@ -1066,16 +1066,16 @@ ul.social li {
     margin-right: 10px;
 }
 
-.twitter {
+.socialicon-twitter {
     background-position: 0px 0px;
 }
-.facebook {
+.socialicon-facebook {
     background-position: -30px 0px;
 }
-.googleplus {
+.socialicon-googleplus {
     background-position: -60px 0px;
 }
-.rss {
+.socialicon-rss {
     background-position: -90px 0px;
 }
 .site-footer .social {

@@ -41,10 +41,10 @@
                 <p>+44 20 7848 7950<br/>
                 <a href="http://twitter.com/newsmatters">@NewsMatters</a></p>
                 <ul class="social">
-                    <li><a href="https://twitter.com/NewsMatters" class="icon twitter">Twitter</a></li>
-                    <li><a href="https://www.facebook.com/pages/Media-Standards-Trust/152015511494934" class="icon facebook">Facebook</a></li>
-                    <!-- <li><a href="" class="icon googleplus">Google+</a></li> 
-                    <li><a href="" class="icon rss">RSS</a></li>-->
+                    <li><a href="https://twitter.com/NewsMatters" class="socialicon socialicon-twitter">Twitter</a></li>
+                    <li><a href="https://www.facebook.com/pages/Media-Standards-Trust/152015511494934" class="socialicon socialicon-facebook">Facebook</a></li>
+                    <!-- <li><a href="" class="socialicon socialicon-googleplus">Google+</a></li> 
+                    <li><a href="" class="socialicon socialicon-rss">RSS</a></li>-->
                 </ul>
             </div>
  
