@@ -215,7 +215,7 @@
             </div>
         </div> <!-- end .l-contain -->
     </div> <!-- end events module -->
-
+<?php /*
     <div class="front front-orwell">
         <div class="l-contain text-center">
             <div class="front-body">
@@ -226,6 +226,8 @@
             </div>
         </div> <!-- end .l-contain -->
     </div>
+    */
+?>
 
 
 <?php get_footer(); ?>

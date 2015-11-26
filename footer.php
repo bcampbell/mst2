@@ -13,10 +13,7 @@
             </div>
 
             <div class="l-item50 footer-r">
-                <p>King's College London<br/>
-                Virginia Woolf Building<br/>
-                22 Kingsway<br/>
-                London WC2B 6NR</p>
+                <p><a href="mailto:contact@mediastandardstrust.org">contact@mediastandardstrust.org</p>
             </div>
 
         </div>
@@ -38,7 +35,7 @@
             </div>
 
             <div class="l-item50 footer-r">                
-                <p>+44 20 7848 7950<br/>
+                <p>+44 (0)203 773 1362<br/>
                 <a href="http://twitter.com/newsmatters">@NewsMatters</a></p>
                 <ul class="social">
                     <li><a href="https://twitter.com/NewsMatters" class="socialicon socialicon-twitter">Twitter</a></li>
